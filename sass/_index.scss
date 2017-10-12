@@ -1,0 +1,43 @@
+header {
+    background-color: #256537;
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    z-index: 80;
+    .head-title {
+        text-decoration: none;
+        position: relative;
+        cursor: pointer;
+        left: 30px;
+        color: #FFF;
+        z-index: 10;
+        font-size: 40px;
+        font-family: 'Zilla Slab', serif;
+        font-style: italic;
+    }
+}
+
+#top-space {
+    background-color: #B3DABF;
+    height: 70px;
+    width: 100%;
+}
+
+.box {
+    background-color: #717194;
+    position: relative;
+    height: 300px;
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 35px;
+    .body-type {
+        text-decoration: none;
+        position: relative;
+        cursor: pointer;
+        left: 30px;
+        color: #FFF;
+        z-index: 10;
+        font-size: 30px;
+        font-family: 'Dancing Script';
+    }
+}
