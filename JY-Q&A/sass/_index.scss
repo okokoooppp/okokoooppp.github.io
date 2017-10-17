@@ -30,31 +30,36 @@ header {
     width: 75%;
     margin: 0 auto;
     margin-bottom: 35px;
-    .video {
+    span {
+        color: 	rgb(222, 224, 184);
         position: relative;
-        top: 17.5px;
-        left: 20px;
+        top: 20px;
+        left: 40px;
+        font-size: 35px;
         float: left;
-        @include screen(pad) {
-            display: none;
-        }
-        @include screen(mobile) {
-            display: none;
-        }
+        font-style: italic;
+    }
+    .audio {
+        position: relative;
+        top: 23.3px;
+        left: 120px;
     }
     .side {
         position: relative;
         background-color: #fff;
-        height: 525px;
-        width: 630px;
+        top: 15px;
+        height: 475px;
+        width: 1170px;
         margin-top: 17.5px;
         margin-left: 37px;
-        float: left;
         overflow: hidden;
         &:hover {
             overflow: auto;
         }
         .vocabulary {
+            @include screen(pad) {
+                display: none;
+            }
             color: #000;
             position: relative;
             width: 100%;
