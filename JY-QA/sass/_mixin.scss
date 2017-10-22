@@ -1,0 +1,44 @@
+/*----------載入圖片,自動寬高----------*/
+@mixin bg($img) { 
+    background: url("../images/#{$img}");
+    width: image-width("../images/#{$img}");
+    height: image-height("../images/#{$img}");
+}
+
+/*----------左右無縫,自動排版----------*/
+@mixin grid-less-seam($col_num,$col_seam) {
+    width: ($width - $col_seam*($col_num - 1)) / $col_num;
+    margin-right: $col_seam;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    &:nth-child(#{$col_num}n){
+        margin-right: 0;
+    }
+}
+
+/*----------左右有縫,自動排版----------*/
+@mixin grid-more-seam($col_num,$col_seam) {
+    width: ($width - $col_seam*($col_num + 1)) / $col_num;
+    margin-left: $col_seam;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    &:nth-child(#{$col_num}n){
+        margin-right: $col_seam;
+    }
+}
+
+/*----------RWD設計,易讀卻長----------*/
+@mixin screen($eqip){
+    @if $eqip == pad {
+        @media only screen and (max-width: 1068px) {
+        @content;
+        }
+    }
+    @if $eqip == mobile {
+        @media only screen and (max-width: 820px) {
+        @content;
+        }
+    }
+}
