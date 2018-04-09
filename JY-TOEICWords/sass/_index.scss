@@ -1,3 +1,7 @@
+html, body {
+    height:100%;
+    margin:0;
+  }
 header {
     background-color: #256537;
     position: fixed;
@@ -21,36 +25,39 @@ header {
     background-color: #B3DABF;
     height: 70px;
     width: 100%;
+    @include screen(mobile) {
+        display: none;
+    }
 }
 
 .box {
     background-color: #717194;
     position: relative;
-    height: 570px;
+    //display: block;
+    height: auto;
     width: 75%;
     margin: 0 auto;
     margin-bottom: 35px;
-    .video {
-        position: relative;
-        top: 17.5px;
-        left: 20px;
-        float: left;
-        @include screen(pad) {
-            display: none;
-        }
-        @include screen(mobile) {
-            display: none;
-        }
+    @include screen(mobile) {
+        width: 100%;
+        background-color: #B3DABF;
     }
     .side {
         position: relative;
+        //display: block;
         background-color: #fff;
-        height: 525px;
-        width: 630px;
+        //height: 75%;
+        width: 1030px;
+        margin: 0 auto;
         margin-top: 17.5px;
-        margin-left: 37px;
-        float: left;
-        overflow: hidden;
+        //margin-left: 37px;
+        //float: left;
+        //overflow: hidden;
+        @include screen(mobile) {
+            margin-top: 0px;
+            width: 600px;
+            background-color: #B3DABF;
+        }
         &:hover {
             overflow: auto;
         }
@@ -58,6 +65,10 @@ header {
             color: #000;
             position: relative;
             width: 100%;
+            border-top-width: 50px;
+            border-bottom-width: 150px;
+            border-style:solid;
+            border-color: #717194;
             thead {
                 background-color: #EEEEEE;
                 border-bottom: 1px solid #D4D4D4;
@@ -76,6 +87,9 @@ header {
                     height: 40px;
                     background-color: #fff;
                     border-bottom: 1px solid #D4D4D4;
+                    @include screen(mobile) {
+                        background-color: #B3DABF;
+                    }
                     td {
                         font-size: 17.5px;
                         position: relative;
