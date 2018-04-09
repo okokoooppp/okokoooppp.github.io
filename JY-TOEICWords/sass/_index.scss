@@ -25,9 +25,6 @@ header {
     background-color: #B3DABF;
     height: 70px;
     width: 100%;
-    @include screen(mobile) {
-        display: none;
-    }
 }
 
 .box {
@@ -38,14 +35,15 @@ header {
     width: 75%;
     margin: 0 auto;
     margin-bottom: 35px;
-    @include screen(mobile) {
+    @include screen(pad) {
         width: 100%;
         background-color: #B3DABF;
+        margin-bottom: 0px;
     }
     .side {
         position: relative;
         //display: block;
-        background-color: #fff;
+        background-color: #B3DABF;
         //height: 75%;
         width: 1030px;
         margin: 0 auto;
@@ -53,9 +51,9 @@ header {
         //margin-left: 37px;
         //float: left;
         //overflow: hidden;
-        @include screen(mobile) {
+        @include screen(pad) {
             margin-top: 0px;
-            width: 600px;
+            width: 100%;
             background-color: #B3DABF;
         }
         &:hover {
@@ -69,6 +67,12 @@ header {
             border-bottom-width: 150px;
             border-style:solid;
             border-color: #717194;
+            border-collapse: collapse;
+            @include screen(pad) {
+                border-style: none;
+                border-top-width: 0px;
+                border-bottom-width: 0px;
+            }
             thead {
                 background-color: #EEEEEE;
                 border-bottom: 1px solid #D4D4D4;
@@ -87,8 +91,8 @@ header {
                     height: 40px;
                     background-color: #fff;
                     border-bottom: 1px solid #D4D4D4;
-                    @include screen(mobile) {
-                        background-color: #B3DABF;
+                    @include screen(pad) {
+                        background-color: #FFF;
                     }
                     td {
                         font-size: 17.5px;
@@ -103,4 +107,10 @@ header {
 
 .mark {
     background-color: yellow;
+}
+
+footer {
+    @include screen(pad) {
+        display: none;
+    }
 }
